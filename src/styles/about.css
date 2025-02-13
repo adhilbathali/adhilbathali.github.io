@@ -1,0 +1,72 @@
+section.about{
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 5rem 5rem 5rem;
+    padding-top: 3rem;
+    background: linear-gradient(135deg, #8A2BE2, #4169E1);
+    color: white;
+}
+
+.about h1{
+    font-size: xx-large;
+    color: white;
+    animation: fadeIn 1s ease-in;
+    animation-timeline: scroll();
+    animation-range: 0vh 70vh;
+}
+
+.about p{
+    width: 90%;
+    text-align: left;
+    line-height: 1.8;
+    color: white;
+    font-size: 18px;
+    animation: fadeIn 1s ease-in;
+    animation-timeline: scroll();
+    animation-range: 0vh 70vh;
+}
+
+.about p b{
+    color: white;
+}
+
+.download-resume{
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    padding: 13px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    align-self: first baseline;
+    margin-top: 1rem;
+    transition: all 0.15s ease-in, box-shadow 0.2s ease-in;
+}
+
+.download-resume:hover{
+    box-shadow: 30px 0 0px 0 white;
+    border: 2px solid white;
+}
+
+.download-resume-btn{
+    align-self: first baseline;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-resume-btn svg{
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    margin: 15px 0 0 3px;
+}
+
+.download-resume-btn:hover .download-arrow{
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}

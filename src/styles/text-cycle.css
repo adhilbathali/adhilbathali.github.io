@@ -1,0 +1,29 @@
+.text-container{
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    font-weight: normal;
+    font-family: "Poppins";
+    color: #444;
+    font-size: 35px;
+    position: absolute;
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+    /* text-shadow: 2px 2px 8px #8A2BE2, -2px -2px 8px #4169E1;} */
+}
+.fade-in{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-out{
+    opacity: 0;
+    transform: translateY(30px);
+}

@@ -1,0 +1,226 @@
+*{
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.hero{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+.hero-left{
+    padding-top: 10rem;
+    width: 45%;
+    height: 100%;
+    order: 1;
+    padding-left: 0;
+}
+
+.hero-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    order: 2;
+    flex-direction: column;
+}
+
+.hero-portrait{
+    height: 30rem;
+    width: 100%;
+    border-radius: 0 8px 8px 0;
+    background-color: #4169E1;
+    background-size: cover;
+    opacity: 1;
+    box-shadow: inset -3px -2px 0px 2px rgba(0, 0, 0, 0.486);
+}
+
+
+.hero-cap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4169E1;
+    width: 100%;
+}
+
+.hero-cap h1{
+    line-height: 1.7;
+    font-size: 40px;
+    font-weight: 800;
+    width: 100%; 
+}
+
+@media (max-width:1000px) {
+    main{
+        height: fit-content;
+    }
+    .hero{
+        flex-direction: column;
+    }
+
+    .hero-left{
+        order: 2;
+    }
+
+    .hero-right{
+        order: 1;
+        padding-top: 6rem;
+    }
+    
+}
+.vision-text{
+    color: blueviolet;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 0 royalblue;
+}
+
+.extraordinary-text{
+    color: #4169E1;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 0 blueviolet;
+}
+
+
+.hero-cta-btns{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+}
+
+
+
+.hero-right button{
+    margin: 0 2rem 0 0;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.my-works-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+    color: white;
+    transition: color 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.my-works-btn::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #8A2BE2, #4169E1);
+    z-index: -2;
+    border-radius: 10px;
+}
+
+.my-works-btn:hover::before{
+    background: linear-gradient(135deg, #4169E1, #8A2BE2);
+}
+
+.my-works-btn::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: linear-gradient(135deg, #8A2BE2, #4169E1);
+    z-index: -1;
+    border-radius: 6px;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.my-works-btn:hover::after{
+    background: linear-gradient(135deg, #4169E1, #8A2BE2);
+}
+
+.my-works-btn:hover{
+    box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+.collaborate-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+    color: #8A2BE2;
+    transition: color 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.collaborate-btn::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(240deg, #4169E1, #8A2BE2);
+    z-index: -2;
+    border-radius: 10px;
+}
+
+.collaborate-btn:hover::before{
+    background: linear-gradient(240deg, grey, #4169E1);
+}
+
+.collaborate-btn::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: white;
+    z-index: -1;
+    border-radius: 6px;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.collaborate-btn:hover::after {
+    transform: scaleX(0);
+}
+
+.collaborate-btn:hover {
+    color: white;
+    box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+
+
