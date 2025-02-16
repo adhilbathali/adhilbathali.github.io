@@ -9,6 +9,7 @@ section.about{
     color: white;
 }
 
+
 .about h1{
     font-size: xx-large;
     color: white;
@@ -23,9 +24,6 @@ section.about{
     line-height: 1.8;
     color: white;
     font-size: 18px;
-    animation: fadeIn 1s ease-in;
-    animation-timeline: scroll();
-    animation-range: 0vh 70vh;
 }
 
 .about p b{
@@ -41,7 +39,7 @@ section.about{
     font-weight: bold;
     align-self: first baseline;
     margin-top: 1rem;
-    transition: all 0.15s ease-in, box-shadow 0.2s ease-in;
+
 }
 
 .download-resume:hover{
@@ -66,7 +64,16 @@ section.about{
     opacity: 1;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(50px); }
-    to { opacity: 1; transform: translateY(0); }
+@media (max-width:768px) {
+    section.about{
+        padding: 2rem 2rem 3rem 2rem;
+    }
+
+    .about p{
+        text-align: left;
+        hyphens: auto;
+        text-wrap: balance;
+        width: 100%;
+    }
+    
 }

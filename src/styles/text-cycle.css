@@ -27,3 +27,17 @@
     opacity: 0;
     transform: translateY(30px);
 }
+
+@media (max-width:768px) {
+    
+}
+
+@media (max-width:768px) {
+    
+}
+
+@media (max-width:576px) {
+    .text{
+        font-size: 25px;
+    }
+}

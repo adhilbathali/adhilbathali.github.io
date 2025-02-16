@@ -1,10 +1,14 @@
 import '../styles/skills-grid.css'
-import skills from '../assets/skills.json'
+import skills from '../assets/skillsInfo.js'
 
 export default function SkillsGrid(){
     return(
-        <div className='skills-gird-container'>
-            {skills.map((skill, i)=>(<h2 key={i}>{skill.name}</h2>))}
+        <div className='skills-grid-container'> {/* Fixed typo */}
+            {skills.map((skill, i) => (
+                <div key={i} className="skill"> {/* Moved key here */}
+                    <img className='skill-image' src={skill.src}></img>
+                </div>
+            ))}
         </div>
     )
 }
