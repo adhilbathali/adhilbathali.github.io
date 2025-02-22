@@ -48,7 +48,7 @@ export default function ContactForm() {
             }
             else{
 
-                const response = await axios.post("http://localhost:3000/contact/submitform", formData, {
+                const response = await axios.post("https://adhilbathali-backend.onrender.com/contact/submitform", formData, {
                   headers: { "Content-Type": "application/json" },
                 });
 
