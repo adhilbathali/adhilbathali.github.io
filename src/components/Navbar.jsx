@@ -1,6 +1,10 @@
 import portfolioLogo from "../assets/adhilBathali-logo/default-monochrome.svg"
 import { useState } from "react"
 import "../styles/navbar.css"
+import Resume from '../assets/Muhammed_Adhil_P_Resume.pdf'
+import { Link } from "react-router-dom";
+
+
 
 export default function Navbar(){
 
@@ -20,11 +24,18 @@ export default function Navbar(){
 
             {/* desktop nav */}
             <ul className="nav-links-desktop">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Contact</a></li>
+                <li>
+                    <Link to="/">Home</Link>
+                </li>
+                <li>
+                    <Link to="/about">About</Link>
+                </li>
+                <li>
+                    <Link to="/projects">Projects</Link>
+                </li>
+                <li>
+                    <Link to="/contact">Contact</Link>
+                </li>
             </ul>
 
             {/* menu-icon */}
@@ -37,11 +48,18 @@ export default function Navbar(){
             {/* mobile nav */}
             <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
                 <ul >
-                    <li><a href="" onClick={toggleMenu}></a>Home</li>
-                    <li><a href="" onClick={toggleMenu}></a>About</li>
-                    <li><a href="" onClick={toggleMenu}></a>Projects</li>
-                    <li><a href="" onClick={toggleMenu}></a>Blog</li>
-                    <li><a href="" onClick={toggleMenu}></a>Contact</li>
+                    <li>
+                        <Link to="/" onClick={toggleMenu}>Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/about" onClick={toggleMenu}>About</Link>
+                    </li>
+                    <li>
+                        <Link to="/projects" onClick={toggleMenu}>Projects</Link>
+                    </li>
+                    <li>
+                        <Link to="/contact" onClick={toggleMenu}>Contact</Link>
+                    </li>
                 </ul>
             </div>
         </nav>

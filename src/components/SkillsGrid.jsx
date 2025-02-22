@@ -5,9 +5,9 @@ export default function SkillsGrid(){
     return(
         <div className='skills-grid-container'> {/* Fixed typo */}
             {skills.map((skill, i) => (
-                <div key={i} className="skill"> {/* Moved key here */}
+                <a href={skill.url} target='blank' div key={i} className="skill">
                     <img className='skill-image' src={skill.src}></img>
-                </div>
+                </a>
             ))}
         </div>
     )

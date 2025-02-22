@@ -19,13 +19,3 @@ section.skills h1{
     font-size: xx-large;
     text-align: center;
 }
-
-.skills-grid {
-    display: flex;
-    justify-content: center;
-    align-items: stretch; /* Allow grid to expand */
-    flex-direction: column;
-    width: 100%;
-    max-width: 1200px; /* Prevents it from stretching too much on large screens */
-    padding: 20px;
-}

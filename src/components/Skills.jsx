@@ -5,7 +5,7 @@ export default function Skills(){
  return(
     <section className="skills">
         <div className="skills-grid">
-            <h1>Skills & Technologies</h1>
+            <h1>Skills & Tech</h1>
             <SkillsGrid />
         </div>
     </section>

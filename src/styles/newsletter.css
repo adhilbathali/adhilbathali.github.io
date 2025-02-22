@@ -1,0 +1,35 @@
+.newsletter{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: first baseline;
+}
+
+.subscribe input{
+    margin-top: 0.8rem;
+    border: none;
+    padding: 12px;
+    border-radius: 5px 0 0 5px;
+    background-color: white;
+}
+
+div.subscribe input:focus{
+    border: none;
+    outline: none;
+}
+
+button.subscribe{
+    border: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-weight: bold;
+    padding: 12px 22px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+button.subscribe:active{
+    border: 2px solid white;
+    padding: 10px 20px;
+}

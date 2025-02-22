@@ -5,14 +5,13 @@ section.about{
     flex-direction: column;
     padding: 0 5rem 5rem 5rem;
     padding-top: 3rem;
-    background: linear-gradient(135deg, #8A2BE2, #4169E1);
     color: white;
 }
 
 
 .about h1{
     font-size: xx-large;
-    color: white;
+    color: #333;
     animation: fadeIn 1s ease-in;
     animation-timeline: scroll();
     animation-range: 0vh 70vh;
@@ -22,12 +21,12 @@ section.about{
     width: 90%;
     text-align: left;
     line-height: 1.8;
-    color: white;
+    color: #333;
     font-size: 18px;
 }
 
 .about p b{
-    color: white;
+    color: #333;
 }
 
 .download-resume{
@@ -43,8 +42,8 @@ section.about{
 }
 
 .download-resume:hover{
-    box-shadow: 30px 0 0px 0 white;
-    border: 2px solid white;
+    box-shadow: 30px 0 0px 0 #333;
+    border: 2px solid #666;
 }
 
 .download-resume-btn{
@@ -52,17 +51,10 @@ section.about{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: opacity 0.8s ease-in-out;
 }
 
-.download-resume-btn svg{
-    opacity: 0;
-    transition: opacity 0.2s ease-in;
-    margin: 15px 0 0 3px;
-}
-
-.download-resume-btn:hover .download-arrow{
-    opacity: 1;
-}
+.fa
 
 @media (max-width:768px) {
     section.about{

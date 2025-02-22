@@ -12,7 +12,7 @@ export default function Hero(){
                 </div>
                 <div className="hero-right">
                     <div className="hero-cap">
-                        <h1>Your <span className="vision-text">Vision </span>, My Code ;) <br /> Let's Create Something <span className="extraordinary-text">Extraordinary</span></h1>
+                        <h1>Your <span className="vision-text">Vision </span>, My Code<br /> Let's Create Something <span className="extraordinary-text">Extraordinary</span></h1>
                     </div>
                     <div className="hero-cta-btns">
                         <button className='my-works-btn'>Explore My Works</button>

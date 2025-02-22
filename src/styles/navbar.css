@@ -33,6 +33,7 @@ nav .nav-links-desktop{
     width: 50%;
 }
 
+
 nav li{
     list-style: none;
     font-size: medium;
@@ -44,6 +45,10 @@ nav li{
 .nav-links-desktop li a {
     text-decoration: none;
     color: #591F8E;
+}
+
+.nav-links-desktop a{
+    text-decoration: none;
 }
 
 nav li a:hover{
@@ -95,6 +100,10 @@ nav li a:hover{
     align-items: first baseline;
     transition: transform 0.3s ease-in-out;
   }
+
+.mobile-menu a{
+    text-decoration: none;
+}
 
 .mobile-menu.active{
     transform: translateX(100%);

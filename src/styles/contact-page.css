@@ -1,0 +1,107 @@
+.contact-main{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+hr.contact-hr{
+    background-color: #333;
+    width: 80%;
+}
+
+.heading{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.heading p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.contact-info-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding-bottom: 2rem;
+}
+
+.contact-info-container .contact-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    justify-content: center;
+    margin: 1rem;
+    background: linear-gradient(100deg, royalblue, blueviolet);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    height: 70px;
+    font-weight: bold;
+}
+
+.contact-lotties{
+    width: 300px;
+    filter: hue-rotate(0deg); /* Adjust color dynamically */
+}
+
+.custom-lottie {
+    filter: hue-rotate(90deg); /* Adjust color dynamically */
+  }
+
+.contact-centre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:576px) {
+
+    .heading{
+        padding: 1rem;
+    }
+
+    .heading h1{
+        padding: 0;
+    }
+
+    .heading p{
+        font-size: 16px;
+    }
+
+    .contact-info-container .contact-info{
+        height: 60px;
+        border-radius: 30px;
+        padding: 10px 20px;
+    }
+
+    .contact-info-container{
+        display: grid;
+    }
+
+    .contact-centre{
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .contact-lotties{
+        width: 180px;
+    }
+
+    .lottie-container{
+        display: flex;
+        padding: 1.12rem 0;
+    }
+
+    .lottie-container .contact-lotties:nth-child(1){
+        display: none;
+    }
+}
