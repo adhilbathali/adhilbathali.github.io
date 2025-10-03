@@ -12,14 +12,22 @@ import signing from "../assets/lottie-animations/Singing Contract.json"
 import userInterface from "../assets/lottie-animations/User Interface.json"
 
 
+import { useEffect } from "react";
+
+
 export default function Contact(){
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     return(
         <div className="contact-main">
             <div className="heading">
                 <h1>Let's Connect</h1>
                 <p>Have a question, a project in mind, or just want to say hi? Drop me a message and I'll get back to you soon!</p>
             </div>
-
+        
             <div className="contact-info-container">
                 <div className="contact-info">adhilbathali@gmail.com</div>
                 <div className="contact-info">+91 7012996798</div>
@@ -33,7 +41,7 @@ export default function Contact(){
                     <Lottie className="contact-lotties" animationData={developers} loop={true} />
                     <Lottie className="contact-lotties" animationData={userInterface} loop={true} />
                 </div>
-            </div> 
+            </div>
             {/* <div className="lottie-container">
                 <Lottie className="contact-lotties" animationData={webdesigner} loop={true} />
                 <Lottie className="contact-lotties" animationData={salesman} loop={true} />

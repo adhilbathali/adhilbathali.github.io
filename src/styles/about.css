@@ -3,8 +3,7 @@ section.about{
     justify-content: top;
     align-items: center;
     flex-direction: column;
-    padding: 0 5rem 5rem 5rem;
-    padding-top: 3rem;
+    padding: 6rem 5rem 5rem 5rem;
     color: white;
 }
 
@@ -12,9 +11,6 @@ section.about{
 .about h1{
     font-size: xx-large;
     color: #333;
-    animation: fadeIn 1s ease-in;
-    animation-timeline: scroll();
-    animation-range: 0vh 70vh;
 }
 
 .about p{
@@ -54,18 +50,21 @@ section.about{
     transition: opacity 0.8s ease-in-out;
 }
 
-.fa
 
 @media (max-width:768px) {
     section.about{
-        padding: 2rem 2rem 3rem 2rem;
+        padding: 6rem 2rem 3rem 2rem;
+    }
+
+    section.about h1{
+        font-size: 28px;
     }
 
     .about p{
-        text-align: left;
+        text-align: justify;
         hyphens: auto;
-        text-wrap: balance;
         width: 100%;
+        font-size: 16px;
     }
     
 }

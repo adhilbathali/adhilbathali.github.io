@@ -71,10 +71,13 @@ hr.contact-hr{
 
     .heading h1{
         padding: 0;
+        font-size: 28px;
+        margin-bottom: 0;
     }
 
     .heading p{
         font-size: 16px;
+        line-height: 1.8;
     }
 
     .contact-info-container .contact-info{

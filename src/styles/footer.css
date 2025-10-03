@@ -33,6 +33,12 @@ footer.footer{
     margin: 0.8rem 0;
 }
 
+.footer-icon{
+    color: white;
+    margin: 0 0.5rem 0 0.2rem;
+    font-size: 20px;
+}
+
 footer.footer hr{
     margin: 3rem 0;
 }
@@ -58,5 +64,11 @@ footer.footer hr{
     .logo-and-newsletter{
         margin-bottom: 0rem;
     }
+
+    div.contacts{
+        width: 250px;
+    }
+
+
     
 }

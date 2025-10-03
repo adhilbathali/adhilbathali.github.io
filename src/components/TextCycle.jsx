@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import '../styles/text-cycle.css'
 export default function TextCycle(){
 
-    const texts = ["\"I develop full-stack applications\"", "\"I design intelligent AI models\"", "\"I create immersive digital experiences\""]
+    const texts = ["Understanding the Requirements", "Designing the Solution", "Development & Launch"]
     const [index, setIndex] = useState(0)
 
     useEffect(() => {

@@ -40,10 +40,18 @@ main{
     height: 30rem;
     width: 100%;
     border-radius: 0 8px 8px 0;
-    background-color: #4169E1;
+    /* background-color: #4169E1; */
+    background-image: linear-gradient(130deg, royalblue, blueviolet);
     background-size: cover;
     opacity: 1;
     box-shadow: inset -3px -2px 0px 2px rgba(0, 0, 0, 0.486);
+}
+
+.hero-portrait img{
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -59,7 +67,7 @@ main{
     line-height: 1.6;
     font-size: 40px;
     font-weight: 800;
-    width: 100%; 
+    width: 100%;
 }
 
 .vision-text{
@@ -235,11 +243,11 @@ main{
     .hero-cap h1 br{
         display: none;
     }
-    
+
 }
 
 @media (max-width:768px) {
-    
+
     .hero .hero-cap{
         width: 100%;
     }
@@ -247,13 +255,13 @@ main{
     .hero-cap h1{
         font-size: 38px;
         font-weight: 800;
-        width: 100%; 
+        width: 100%;
     }
 
     .hero-cta-btns button{
         font-size: 18px;
     }
-    
+
 }
 
 @media (max-width:576px) {
@@ -277,15 +285,15 @@ main{
     .hero-cap h1{
         font-size: 32px;
         font-weight: 800;
-        width: 100%; 
+        width: 100%;
     }
 
     .hero-left{
-        padding: 3rem;
+        padding: 3rem 1rem 0rem 1rem;
         width: 100%;
         height: fit-content;
     }
-    
+
 }
 
 

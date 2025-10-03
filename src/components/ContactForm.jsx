@@ -15,29 +15,41 @@ export default function ContactForm() {
     query: "",
   });
 
-  const [message, setMessage] = useState("");
+    const [message, setMessage] = useState("");
 
-  const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
+    const validateEmail = (email) => {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    };
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+    const handleChange = (e) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
 
-  const handlePhoneChange = (phoneData) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      phone: {
-        country: phoneData.country,
-        number: phoneData.number,
-      },
-    }));
-  };
+    const handlePhoneChange = (phoneData) => {
+      setFormData((prevData) => ({
+        ...prevData,
+        phone: {
+          country: phoneData.country,
+          number: phoneData.number,
+        },
+      }));
+    };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+
+      
+    // Reset form fields after submission
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: { country: "", number: "" }, // Reset phone input
+      representType: "Individual",
+      representName: "",
+      query: "",
+    });
 
     try {
 
@@ -55,41 +67,14 @@ export default function ContactForm() {
 
                 if(response.data.response === "ok"){
                     setMessage("Form submitted successfully")
-                    setFormData({
-                    firstName: "",
-                    lastName: "",
-                    email: "",
-                    phone: {country:"", number:""},
-                    representType: "Individual",
-                    representName: "",
-                    query: "",
-                    });
                     return;
                 }
                 else if(response.data.response === "You have already sent a query"){
                     setMessage("You have already sent a query!")
-                    setFormData({
-						firstName: "",
-						lastName: "",
-						email: "",
-						phone: {country:"", number:""},
-						representType: "Individual",
-						representName: "",
-						query: "",
-					  });
                     return;
                 }
                 else{
                     setMessage("Error submitting form. Please try again.")
-                    setFormData({
-						firstName: "",
-						lastName: "",
-						email: "",
-						phone: {country:"", number:""},
-						representType: "Individual",
-						representName: "",
-						query: "",
-					  });
                     return;
                 }
 
@@ -130,7 +115,7 @@ export default function ContactForm() {
       </div>
 
       <div className="phone-attribute">
-       <PhoneInput key={formData.phone.number} value={formData.phone} onChange={handlePhoneChange} required />
+       <PhoneInput value={formData.phone} onChange={handlePhoneChange} />
       </div>
 
       

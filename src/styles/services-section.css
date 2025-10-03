@@ -1,0 +1,95 @@
+section.services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.services h1{
+    font-size: xx-large;
+}
+
+.service p{
+    line-height: 2;
+}
+
+.services-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10rem;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.services-heading p{
+    line-height: 2;
+}
+
+
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(2, 700px);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.services-container .service{
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 2rem;
+    background: linear-gradient(192deg, royalblue, blueviolet);
+}
+
+.services-container .service-content{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-lottie{
+    width: 100%;
+}
+
+#consultation{
+    position: relative;
+}
+
+#consultation svg{
+    position: absolute;
+    height: 200px; 
+    bottom: -13%; 
+}
+
+
+@media (max-width:576px) {
+    .services-container{
+        grid-template-columns: 1fr;
+        margin: 0 1.2rem;
+        padding: 0;
+    }
+
+    .services-heading{
+        margin: 1rem;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+        hyphens: auto;
+    }
+
+    .services-container .service{
+        padding: 2rem;
+        hyphens: auto;
+    }
+
+    #consultation svg{
+        position: relative;
+    }
+    
+}

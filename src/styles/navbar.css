@@ -44,7 +44,7 @@ nav li{
 
 .nav-links-desktop li a {
     text-decoration: none;
-    color: #591F8E;
+    color: #1b1943d2;
 }
 
 .nav-links-desktop a{
@@ -103,7 +103,7 @@ nav li a:hover{
 
 .mobile-menu a{
     text-decoration: none;
-}
+    color: #1b1943d2;}
 
 .mobile-menu.active{
     transform: translateX(100%);

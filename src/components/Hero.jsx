@@ -1,5 +1,7 @@
 import '../styles/hero.css'
 import TextCycle from './TextCycle'
+import { Link } from "react-router-dom";
+
 
 export default function Hero(){
     return(
@@ -7,16 +9,17 @@ export default function Hero(){
             <div className="hero">
                 <div className='hero-left'>
                     <div className='hero-portrait'>
+                        <img src="/juggling1.png" alt="" />
                     </div>
                     <TextCycle />
                 </div>
                 <div className="hero-right">
                     <div className="hero-cap">
-                        <h1>Your <span className="vision-text">Vision </span>, My Code<br /> Let's Create Something <span className="extraordinary-text">Extraordinary</span></h1>
+                        <h1>Your <span className="vision-text">Vision </span>, My Code<br /> Let's Create the <span className="extraordinary-text">Extraordinary</span></h1>
                     </div>
                     <div className="hero-cta-btns">
-                        <button className='my-works-btn'>Explore My Works</button>
-                        <button className='collaborate-btn'>Let's Collaborate</button>
+                        <Link to='./projects'><button className='my-works-btn'>Explore My Works</button></Link>
+                        <Link to="./contact"><button className='collaborate-btn'>Let's Collaborate</button></Link>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Select from "react-select";
 
 const options = [
@@ -24,24 +24,20 @@ const options = [
   { value: "+7", label: "🇷🇺 +7", search: "Russia", fullLabel: "🇷🇺 +7 (Russia)" }
 ];
 
-// Sort options alphabetically by country name
 const sortedOptions = options.sort((a, b) => a.search.localeCompare(b.search));
 
 export default function PhoneInput({ value, onChange }) {
   const [selectedOption, setSelectedOption] = useState(
-    sortedOptions.find((option) => option.value === "+91") // Default to India
+    sortedOptions.find((option) => option.value === "+91")
   );
-
   const [phoneNumber, setPhoneNumber] = useState("");
 
-  // Enable searching by country name
-  const filterOption = (option, inputValue) => {
-    return option.data.search.toLowerCase().includes(inputValue.toLowerCase());
-  };
-
-  // Show full name in dropdown, but only flag & code after selection
-  const formatOptionLabel = ({ label, fullLabel }, { context }) =>
-    context === "menu" ? fullLabel : label;
+  useEffect(() => {
+    if (!value.number) {
+      setSelectedOption(sortedOptions.find((option) => option.value === "+91"));
+      setPhoneNumber("");
+    }
+  }, [value.number]);
 
   const handleCountryChange = (selected) => {
     setSelectedOption(selected);
@@ -60,16 +56,15 @@ export default function PhoneInput({ value, onChange }) {
       <div className="phone-input-container" style={{ display: "flex", gap: "8px" }}>
         <Select
           options={sortedOptions}
+          getOptionLabel={(e) => e.fullLabel} // Show country name when searching
           value={selectedOption}
           onChange={handleCountryChange}
-          formatOptionLabel={formatOptionLabel} // Show full name in dropdown, only flag & code when selected
-          filterOption={filterOption} // Enable searching by name
           styles={{
             control: (provided, state) => ({
               ...provided,
-              width:"120px",
-              borderColor: state.isFocused ? "royalblue" : "#ccc", // Change border color on focus
-              boxShadow: state.isFocused ? "none" : "none", // Add shadow on focus
+              width: "150px",
+              borderColor: state.isFocused ? "royalblue" : "#ccc",
+              boxShadow: state.isFocused ? "none" : "none",
             })
           }}
         />

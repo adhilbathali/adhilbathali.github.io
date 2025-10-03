@@ -4,3 +4,12 @@ body{
     font-family: "Montserrat", "Poppins",serif;
     background-color: #fff;
 }
+
+*{
+    caret-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input, textarea{
+    caret-color: #333;
+}
